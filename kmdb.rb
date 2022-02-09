@@ -133,25 +133,51 @@ dark_knight_rises = Movie.new(values)
 dark_knight_rises.save
 
 # #insert Roles
-# values = { movie_id: , person_id: 2, character_name: "Bruce Wayne" }
-# bruce_wayne = Roles.new(values)
-# bruce_wayne.save
+bruce_wayne = Role.new({person_id: christian_bale.id, movie_id: batman_begins.id, character_name: "Bruce Wayne", })
+bruce_wayne.save
 
-# Batman Begins          Christian Bale        Bruce Wayne
-# Batman Begins          Michael Caine         Alfred
-# Batman Begins          Liam Neeson           Ra's Al Ghul
-# Batman Begins          Katie Holmes          Rachel Dawes
-# Batman Begins          Gary Oldman           Commissioner Gordon
-# The Dark Knight        Christian Bale        Bruce Wayne
-# The Dark Knight        Heath Ledger          Joker
-# The Dark Knight        Aaron Eckhart         Harvey Dent
-# The Dark Knight        Michael Caine         Alfred
-# The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
-# The Dark Knight Rises  Christian Bale        Bruce Wayne
-# The Dark Knight Rises  Gary Oldman           Commissioner Gordon
-# The Dark Knight Rises  Tom Hardy             Bane
-# The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
-# The Dark Knight Rises  Anne Hathaway         Selina Kyle
+alfred = Role.new({person_id: michael_caine.id, movie_id: batman_begins.id, character_name: "Alfred", })
+alfred.save
+
+ras_al_ghul = Role.new({person_id: liam_neeson.id, movie_id: batman_begins.id, character_name: "Ra's Al Ghul", })
+ras_al_ghul.save
+
+rachel_dawes = Role.new({person_id: katie_holmes.id, movie_id: batman_begins.id, character_name: "Rachel Dawes", })
+rachel_dawes.save
+
+commissioner_gordon = Role.new({person_id: gary_oldman.id, movie_id: batman_begins.id, character_name: "Commissioner Gordon", })
+commissioner_gordon.save
+
+bruce_wayne = Role.new({person_id: christian_bale.id, movie_id: dark_knight.id, character_name: "Bruce Wayne", })
+bruce_wayne.save
+
+joker = Role.new({person_id: heath_ledger.id, movie_id: dark_knight.id, character_name: "Joker", })
+joker.save
+
+harvey_dent = Role.new({person_id: aaron_eckhart.id, movie_id: dark_knight.id, character_name: "Harvey Dent", })
+harvey_dent.save
+
+alfred = Role.new({person_id: michael_caine.id, movie_id: dark_knight.id, character_name: "Alfred", })
+alfred.save
+
+rachel_dawes = Role.new({person_id: maggie_gyllenhaal.id, movie_id: dark_knight.id, character_name: "Rachel Dawes", })
+rachel_dawes.save
+
+bruce_wayne = Role.new({person_id: christian_bale.id, movie_id: dark_knight_rises.id, character_name: "Bruce Wayne", })
+bruce_wayne.save
+
+commissioner_gordon = Role.new({person_id: gary_oldman.id, movie_id: dark_knight_rises.id, character_name: "Commissioner Gordon", })
+commissioner_gordon.save
+
+bane = Role.new({person_id: tom_hardy.id, movie_id: dark_knight_rises.id, character_name: "Bane", })
+bane.save
+
+john_blake = Role.new({person_id: joseph_gordon_levitt.id, movie_id: dark_knight_rises.id, character_name: "John Blake", })
+john_blake.save
+
+selina_kyle = Role.new({person_id: anne_hathaway.id, movie_id: dark_knight_rises.id, character_name: "Selina Kyle", })
+selina_kyle.save
+
 
 # Prints a header for the movies output
 puts "Movies"
