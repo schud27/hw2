@@ -70,12 +70,72 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
+
 # Generate models and tables, according to the domain model
 # TODO!
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+# insert People
+
+christopher_nolan = Person.new({ name: "Christopher Nolan" })
+christopher_nolan.save
+
+christian_bale = Person.new({ name: "Christian Bale" })
+christian_bale.save
+
+michael_caine = Person.new({ name: "Michael Caine" })
+michael_caine.save
+
+liam_neeson = Person.new({ name: "Liam Neeson" })
+liam_neeson.save
+
+katie_holmes = Person.new({ name: "Katie Holmes" })
+katie_holmes.save
+
+gary_oldman = Person.new({ name: "Gary Oldman" })
+gary_oldman.save
+
+heath_ledger = Person.new({ name: "Heath Ledger" })
+heath_ledger.save
+
+aaron_eckhart = Person.new({ name: "Aaron Eckhart" })
+aaron_eckhart.save
+
+maggie_gyllenhaal = Person.new({ name: "Maggie Gyllenhaal" })
+maggie_gyllenhaal.save
+
+tom_hardy = Person.new({ name: "Tom Hardy" })
+tom_hardy.save
+
+joseph_gordon_levitt = Person.new({ name: "Joseph Gordon-Levitt" })
+joseph_gordon_levitt.save
+
+anne_hathaway = Person.new({ name: "Anne Hathaway" })
+anne_hathaway.save
+
+# insert Movies
+values = { title: "Batman Begins", year_released: 2005, rated: "PG-13", person_id: 1 }
+batman_begins = Movies.new(values)
+batman_begins.save
+
+values = { title: "The Dark Knight", year_released: 2008, rated: "PG-13", person_id: 1 }
+dark_knight = Movies.new(values)
+dark_knight.save
+
+values = { title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", person_id: 1 }
+dark_knight_rises = Movies.new(values)
+dark_knight_rises.save
+
+#insert Roles
+values = { movie_id: , person_id: 2, character_name: "Bruce Wayne" }
+bruce_wayne = Roles.new(values)
+bruce_wayne.save
 
 # Prints a header for the movies output
 puts "Movies"
