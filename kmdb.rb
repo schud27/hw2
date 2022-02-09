@@ -120,22 +120,38 @@ anne_hathaway = Person.new({ name: "Anne Hathaway" })
 anne_hathaway.save
 
 # insert Movies
-values = { title: "Batman Begins", year_released: 2005, rated: "PG-13", person_id: 1 }
-batman_begins = Movies.new(values)
+values = { title: "Batman Begins", year_released: 2005, rated: "PG-13", person_id: christopher_nolan.id }
+batman_begins = Movie.new(values)
 batman_begins.save
 
-values = { title: "The Dark Knight", year_released: 2008, rated: "PG-13", person_id: 1 }
-dark_knight = Movies.new(values)
+values = { title: "The Dark Knight", year_released: 2008, rated: "PG-13", person_id: christopher_nolan.id }
+dark_knight = Movie.new(values)
 dark_knight.save
 
-values = { title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", person_id: 1 }
-dark_knight_rises = Movies.new(values)
+values = { title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", person_id: christopher_nolan.id }
+dark_knight_rises = Movie.new(values)
 dark_knight_rises.save
 
-#insert Roles
-values = { movie_id: , person_id: 2, character_name: "Bruce Wayne" }
-bruce_wayne = Roles.new(values)
-bruce_wayne.save
+# #insert Roles
+# values = { movie_id: , person_id: 2, character_name: "Bruce Wayne" }
+# bruce_wayne = Roles.new(values)
+# bruce_wayne.save
+
+# Batman Begins          Christian Bale        Bruce Wayne
+# Batman Begins          Michael Caine         Alfred
+# Batman Begins          Liam Neeson           Ra's Al Ghul
+# Batman Begins          Katie Holmes          Rachel Dawes
+# Batman Begins          Gary Oldman           Commissioner Gordon
+# The Dark Knight        Christian Bale        Bruce Wayne
+# The Dark Knight        Heath Ledger          Joker
+# The Dark Knight        Aaron Eckhart         Harvey Dent
+# The Dark Knight        Michael Caine         Alfred
+# The Dark Knight        Maggie Gyllenhaal     Rachel Dawes
+# The Dark Knight Rises  Christian Bale        Bruce Wayne
+# The Dark Knight Rises  Gary Oldman           Commissioner Gordon
+# The Dark Knight Rises  Tom Hardy             Bane
+# The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
+# The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 # Prints a header for the movies output
 puts "Movies"
