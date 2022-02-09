@@ -81,8 +81,7 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
-# insert People
-
+# insert data into People
 christopher_nolan = Person.new({ name: "Christopher Nolan" })
 christopher_nolan.save
 
@@ -119,7 +118,7 @@ joseph_gordon_levitt.save
 anne_hathaway = Person.new({ name: "Anne Hathaway" })
 anne_hathaway.save
 
-# insert Movies
+# insert data into Movies
 values = { title: "Batman Begins", year_released: 2005, rated: "PG-13", person_id: christopher_nolan.id }
 batman_begins = Movie.new(values)
 batman_begins.save
@@ -132,7 +131,7 @@ values = { title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", 
 dark_knight_rises = Movie.new(values)
 dark_knight_rises.save
 
-# #insert Roles
+# insert data into Roles
 bruce_wayne = Role.new({person_id: christian_bale.id, movie_id: batman_begins.id, character_name: "Bruce Wayne", })
 bruce_wayne.save
 
